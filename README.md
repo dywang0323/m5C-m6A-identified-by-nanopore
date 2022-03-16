@@ -12,5 +12,10 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     cat *.fastq > all.fastq
   
  2. Quality control (Minimap2 & Marginalign)
+ 
+ Minimap2 (input: fastq data, genome/transcritome data, output: alighnment data.sam). this step will take several minutes to hours
+ 
+ batch command
+ 
 
 
