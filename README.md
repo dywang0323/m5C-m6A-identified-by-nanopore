@@ -17,7 +17,14 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
  
     Minimap2 (input: fastq data, genome/transcritome data, output: alighnment data.sam). this step will take several minutes to hours
  
-    batch command
+    batch command (minimap2)
+    
+    genome reads:
+    minimap2 -ax map-ont ref.fa ont-reads.fq > aln.sam
+    
+    direct RNAseq
+    minimap2 -ax splice -uf -k14 ref.fa direct-rna.fq > aln.sam
+    
  
 
 
