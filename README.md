@@ -22,7 +22,7 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     genome reads:
     minimap2 -ax map-ont ref.fa ont-reads.fq > aln.sam
     
-    direct RNAseq
+    direct RNAseq:
     minimap2 -ax splice -uf -k14 ref.fa direct-rna.fq > aln.sam
     
  
