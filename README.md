@@ -12,6 +12,10 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     merge all the generated fastQ files together
     
     cat *.fastq > all.fastq
+    
+    unique the headers in the fastQ file to be unique (code in the "script" folder)
+    
+    uniquifyFastq input.fastQ input_unique_header
   
  2. Quality control (Minimap2 & Marginalign)
  
