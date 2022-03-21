@@ -37,6 +37,16 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     make
     virtualenv --python=python2.7 --no-site-packages --distribute env && source env/bin/activate && pip install -r requirements.txt
     
- 
+    To calculate the median/avg/min/max identity of reads in a sam file do
+    
+    marginStats --localAlignment input.sam read.fastq reference.fasta  --readIdentity --alignmentIdentity --readCoverage --mismatchesPerAlignedBase --                     deletionsPerReadBase --insertionsPerReadBase --readLength --printValuePerReadAlignment
+    
+    To calculate the substitution 
+    
+    marginAlign/scripts/substitutions _unique.fastq reference.fa _minimap_pass.sam output_directory
+    
+
+
+
 
 
