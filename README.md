@@ -16,6 +16,10 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     unique the headers in the fastQ file to be unique (code in the "script" folder)
     
     uniquifyFastq input.fastQ input_unique_header
+    
+    convert T with U without changing headers in the fastQ
+    
+    awk '/^[^>]/{ gsub(/U/,"T") }1' _unique.fastq > _unique_new_1.fastq
   
  2. Quality control (Minimap2 & Marginalign)
  
