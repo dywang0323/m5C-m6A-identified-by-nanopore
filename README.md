@@ -29,6 +29,14 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     direct RNAseq:
     minimap2 -ax splice -uf -k14 ref.fa direct-rna.fq > aln.sam
     
+    when using Marginalign, a virtual environment need to be built as below:
+    
+    module load Python/2.7.14-intel-2018a
+    cd marginAlign
+    make clean
+    make
+    virtualenv --python=python2.7 --no-site-packages --distribute env && source env/bin/activate && pip install -r requirements.txt
+    
  
 
 
