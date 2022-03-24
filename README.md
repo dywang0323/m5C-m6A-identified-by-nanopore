@@ -54,7 +54,7 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     
   3. m5C and m6A modification identification
   
-    # prepare the proper files format (samtools)
+   1) prepare the proper files format (samtools)
     
     sam2bam
     
@@ -64,7 +64,7 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     
     samtools index output.sorted.bam
     
-    1) DNA m5C modification detectation
+    2) DNA m5C modification detectation
     
     nanopolish index -d output_dir _unique.fastq
     
@@ -72,7 +72,7 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     
     calculate_methylation_frequency.py output.tsv > m5c_frequency.tsv
     
-    2) DNA m6A modification identification
+    3) DNA m6A modification identification
     
     align signal-level events to k-mers of a reference genome
     
