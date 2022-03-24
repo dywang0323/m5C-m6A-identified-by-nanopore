@@ -62,6 +62,22 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     samtools sort -T tmp -o output_file.sorted.bam output_file.bam
     
     samtools index output.sorted.bam
+    
+    # DNA m5C modification detectation
+    
+    nanopolish index -d output_dir _unique.fastq
+    
+    nanopolish call-methylation -t 8 -r input.fastq -b inputfile.sorted.bam -g reference.fasta > output.tsv
+    
+    calculate_methylation_frequency.py output.tsv > m5c_frequency.tsv
+    
+    # DNA m6A modification identification
+    
+    
+
+    
+    align signal-level events to k-mers of a reference genome
+    
 
 
   
