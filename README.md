@@ -73,12 +73,15 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     
     # DNA m6A modification identification
     
-    
-    
-    
-
-    
     align signal-level events to k-mers of a reference genome
+    
+    nanopolish index -d /work/schroederrna/methylation/hbecpolya -s sequencing_summary.txt _unique.fastq
+    
+    nanopolish eventalign --scale-events -n -t 8 --reads _unique_new.fastq --bam input.sorted.bam --genome reference.fa > outputfile_event.tsv
+    
+    mCaller.py <-m GATC or -p positions.txt> -r <reference>.fasta -d r95_twobase_model_NN_6_m6A.pkl -e <filename>.eventalign.tsv -f <filename>.fastq -b A 
+
+
     
 
 
