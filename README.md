@@ -60,6 +60,8 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     samtools view -b -S -o output_file.bam _minimap_pass.sam
     
     samtools sort -T tmp -o output_file.sorted.bam output_file.bam
+    
+    samtools index output.sorted.bam
 
 
   
