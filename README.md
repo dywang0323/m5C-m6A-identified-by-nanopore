@@ -52,9 +52,13 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     *using the script "identityPlots.R" and "substitution_plot.R" to plot the QC results
     
   3. m5C and m6A modification identification
+  
     # prepare the proper files format (samtools)
+    
     sam2bam
+    
     samtools view -b -S -o output_file.bam _minimap_pass.sam
+    
     samtools sort -T tmp -o output_file.sorted.bam output_file.bam
 
 
