@@ -49,6 +49,7 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     
     marginAlign/scripts/substitutions _unique.fastq reference.fa _minimap_pass.sam output_directory
     
+    using the script ""
 
 
 
