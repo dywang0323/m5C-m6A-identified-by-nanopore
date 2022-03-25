@@ -85,7 +85,9 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     4) RNA m6A modification identfication
       Run the EEF.PY script, using outputfile_event.tsv as input
       
-      Run
+      selecte out the interested k-mer
+      
+      Run current_movement_plot.R script to identify the movement of current density 
 
 
     
