@@ -83,6 +83,9 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     mCaller.py <-m GATC or -p positions.txt> -r <reference>.fasta -d r95_twobase_model_NN_6_m6A.pkl -e <filename>.eventalign.tsv -f <filename>.fastq -b A 
     
     4) RNA m6A modification identfication
+      Run the EEF.PY script, using outputfile_event.tsv as input
+      
+      Run
 
 
     
