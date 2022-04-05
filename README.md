@@ -1,8 +1,8 @@
 # m5C-m6A-identified-by-nanopore
 
-A pipline used to identify the m5c and m6A modification using the nanopore DNA and RNA sequencing data
+# A pipline used to identify the m5c and m6A modification using the nanopore DNA and RNA sequencing data
 
-1. Basecalling --> fast5 to fastQ (Guppy). this step will take several hours even several days especially for RNA data
+# Basecalling --> fast5 to fastQ (Guppy). this step will take several hours even several days especially for RNA data
 
    batch file command:
   
@@ -22,7 +22,7 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     
     awk '/^[^>]/{ gsub(/U/,"T") }1' _unique.fastq > _unique_new_1.fastq
   
- 2. Quality control (Minimap2 & Marginalign)
+ # Quality control (Minimap2 & Marginalign)
  
     Minimap2 (input: fastq data, genome/transcritome data, output: alighnment data.sam). this step will take several minutes to hours
  
@@ -52,7 +52,7 @@ A pipline used to identify the m5c and m6A modification using the nanopore DNA a
     
     *using the script "identityPlots.R" and "substitution_plot.R" to plot the QC results
     
-  3. m5C and m6A modification identification
+  # m5C and m6A modification identification
   
    1) prepare the proper files format (samtools)
     
