@@ -35,6 +35,10 @@
     direct RNAseq:
     minimap2 -ax splice -uf -k14 ref.fa direct-rna.fq > aln.sam
     
+    usually ONT reads were align to the genome (for human: Ensembl primary assembly GRCh38) and transcripttome (combined cDNA and ncRNA reference fasta                            file from Ensembl GECH38.90)
+    for the genome alignment, alignment files from minimap2 were converted to bam format, sorted and indexed using samtools. the Bioconductor package Genomic Alignments(v1.32.0) was used to extract juctions from the alignments. for each observed juction, we calculated the distance to the closest annotated juction(the absolute difference between the start positions plus the obsolute difference between the end position)
+    for the transcriptome alignments, we used arguments -ax map-ont-N100 to allow more secondary alignments, given the hign similarity among trascript isoforms.
+     
     when using Marginalign, a virtual environment need to be built as below:
     
     module load Python/2.7.14-intel-2018a
