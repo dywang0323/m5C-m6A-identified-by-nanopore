@@ -100,6 +100,25 @@
     mCaller.py <-m GATC or -p positions.txt> -r <reference>.fasta -d r95_twobase_model_NN_6_m6A.pkl -e <filename>.eventalign.tsv -f <filename>.fastq -b A 
     
     4) RNA m6A modification identfication
+    
+    The software "xpore" or "m6anet" can be used to identify the m6A modification without well trained model
+    some tips to install the xpore & m6anet
+    ->deactivate the export PATH in .bashrc
+      $cd $HOME
+      $nano .bashrc
+    ->deactivate the anaconda
+      $conda deactivate
+    -> create the virtual environment and reinstall the software
+      $python3 -m venv m6anet
+      $source ./m6anet/bin/activate
+      $pip install m6anet
+      $pip install xpore      
+    ->restart the terminal
+    ->type the command agin
+      $conda deactivate
+      $source ./m6anet/bin/activate
+      $module load python
+      
       Run the EEF.PY script, using outputfile_event.tsv as input
       
       selecte out the interested k-mer
