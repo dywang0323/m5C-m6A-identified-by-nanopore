@@ -121,7 +121,7 @@
       $source ./m6anet/bin/activate
       $module load python
       
-      We use m6anet as example:
+      We use m6anet as example: (Python 3.9.5 was tested to be working, tpdm have to be installed)
       1) prepare the eventalign.txt file from nanopolish
       $nanopolish index -d /work_dir -s /sequencing_summary.txt /reads.fastq
       $nanopolish eventalign --reads /reads.fastq --bam /reads.sorted.bam 
