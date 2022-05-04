@@ -102,6 +102,8 @@
     4) RNA m6A modification identfication
     
     The software "xpore" or "m6anet" can be used to identify the m6A modification without well trained model
+   
+    if there's issue on the installation, the below way may be help
     some tips to install the xpore & m6anet
     ->deactivate the export PATH in .bashrc
       $cd $HOME
@@ -118,6 +120,18 @@
       $conda deactivate
       $source ./m6anet/bin/activate
       $module load python
+      
+      We use m6anet as example:
+      1) prepare the eventalign.txt file from nanopolish
+      $nanopolish index -d /work_dir -s /sequencing_summary.txt /reads.fastq
+      $nanopolish eventalign --reads /reads.fastq --bam /reads.sorted.bam 
+      --genome /transcriptome_reference.fa --scale-events --signal-index 
+      --summary/sequencing_summary.txt 
+      --threads 50 
+      > /eventalign.txt
+      2)preprocess the segmented raw signal file in the form of nanopolish eventalign file (this step takes several hours)
+      $m6anet-dataprep --eventalign /eventalign.txt --out_dir /output_dir --n_processes 4
+
       
       Run the EEF.PY script, using outputfile_event.tsv as input
       
