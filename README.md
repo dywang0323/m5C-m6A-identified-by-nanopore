@@ -131,6 +131,8 @@
       > /eventalign.txt
       2)preprocess the segmented raw signal file in the form of nanopolish eventalign file (this step takes several hours)
       $m6anet-dataprep --eventalign /eventalign.txt --out_dir /output_dir --n_processes 4
+      3)m6anet-run_inference --input_dir /input_dir --out_dir /output_dir --infer_mod_rate --n_processes 4
+
 
       
       Run the EEF.PY script, using outputfile_event.tsv as input
