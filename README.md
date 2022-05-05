@@ -133,7 +133,7 @@
       $m6anet-dataprep --eventalign /eventalign.txt --out_dir /output_dir --n_processes 4
       3)m6anet-run_inference --input_dir /input_dir --out_dir /output_dir --infer_mod_rate --n_processes 4
       
-      # m6A modification comparision (Xpore)
+ # m6A modification comparision (Xpore)
       1) Preprocess the data for each data set
       $ xpore dataprep --eventalign /hbecpolya_eventalign.txt --out_dir /output_dir
       2) Pairwise comparison
