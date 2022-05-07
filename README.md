@@ -148,7 +148,7 @@
       Run the EEF.PY script, using outputfile_event.tsv as input
       
       selecte out the interested k-mer
-      awk '$9="GGACU"' file_in.txt > file_out.txt
+      awk '$10=="GGACA"' file_in.txt > file_out.txt
       
       Run current_movement_plot.R script to identify the movement of current density 
 
