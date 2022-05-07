@@ -151,6 +151,8 @@
       awk '$10=="GGACA"' file_in.txt > file_out.txt
       remove the header from the EEF file from IVT data
       awk 'NR>1' EEF.txt > EEF_new.txt
+      replace "modified" with "unmodified"
+      sed 's/modified/unmodified/g' EEF_new.txt
       
       Run current_movement_plot.R script to identify the movement of current density 
 
