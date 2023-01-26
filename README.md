@@ -102,6 +102,9 @@
     4) RNA m6A modification identfication
     
     The software "xpore" or "m6anet" can be used to identify the m6A modification without well trained model
+    torch==1.6.0 must be installed:
+    
+    pip install torch==1.6.0 torchvision==0.7.0 --user
    
     if there's issue on the installation, the below way may be help
     some tips to install the xpore & m6anet
