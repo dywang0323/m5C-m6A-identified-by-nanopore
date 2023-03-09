@@ -162,7 +162,9 @@ you also can run the Guupy in the paralel way by adjusting the batch file:
       Run current_movement_plot.R script to identify the movement of current density 
       
 # GO annotation
+
 Extract the reads that have been aligned to the reference
+
 ```
 samtools view -F 0x4 file.sam > /aligned_reads.sam
 ```
