@@ -162,7 +162,7 @@
 # GO annotation
 Extract the reads that have been aligned to the reference
  
-$samtools view -F 0x4 file.sam > /aligned_reads.sam
+$ samtools view -F 0x4 file.sam > /aligned_reads.sam
  
  
 
