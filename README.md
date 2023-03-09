@@ -166,8 +166,8 @@ Extract the reads that have been aligned to the reference
 ```
 samtools view -F 0x4 file.sam > /aligned_reads.sam
 ```
-
 Extract the header information
+
 ```
 samtools view -H /aligned_file.sam > /header_file.txt
 ``` 
