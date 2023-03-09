@@ -171,22 +171,3 @@ Extract the header information
 ```
 samtools view -H /aligned_file.sam > /header_file.txt
 ``` 
-
-
-      
-      
-
-
-    
-
-
-  
-  
-  
-    
-
-
-
-
-
-
