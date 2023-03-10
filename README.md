@@ -163,9 +163,9 @@ you also can run the Guupy in the paralel way by adjusting the batch file:
       
 # GO annotation
 
-Extract the reads that have been aligned to the reference
-
-samtools view -F 0x4 file.sam > /aligned_reads.sam
+  Extract the reads that have been aligned to the reference
+```
+  samtools view -F 0x4 file.sam > /aligned_reads.sam
 ```
 Extract the header information
 
