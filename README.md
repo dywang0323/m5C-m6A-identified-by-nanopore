@@ -20,9 +20,9 @@ you also can run the Guupy in the paralel way by adjusting the batch file:
    echo "My SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
    
    guppy_basecaller -i / FAO44045_pass_768f8f04_${SLURM_ARRAY_TASK_ID}.fast5 --save_path /fastQ_1 --config /.cfg
-     
+```      
     output: file.fastq, sequencing_summary.txt
-```  
+ 
     merge all the generated fastQ files together
    ``` 
     cat *.fastq > all.fastq
