@@ -170,4 +170,17 @@ you also can run the Guupy in the paralel way by adjusting the batch file:
   samtools view -H /aligned_file.sam > /header_file.txt
   ``` 
   
+  
+  # calculate the polyA length
+  
+  ```
+  nanopolish polya --threads=8 --reads=data\
+  --bam=data\
+  --genome=data\
+  > polyA_length.txt
+  
+  grep 'PASS' polya_results.tsv > polya_results.pass_only.tsv
+  
+  ```
+  
  
