@@ -172,6 +172,17 @@ you also can run the Guupy in the paralel way by adjusting the batch file:
   
   
   # calculate the polyA length
+  # index the fastq file
+  
+  ```
+  nanopolish index 
+  -d 
+  /fast5\ 
+  -s /sequencing_summary.txt\
+  /basecallingoutput.fastq
+  
+  ```
+  # Segmentation and tail length estimation with nanopolish polya
   
   ```
   nanopolish polya --threads=8 --reads=data\
@@ -179,6 +190,10 @@ you also can run the Guupy in the paralel way by adjusting the batch file:
   --genome=data\
   > polyA_length.txt
   
+  ```
+  # filter away all rows with the tag set to anything other than PASS
+  
+  ```
   grep 'PASS' polya_results.tsv > polya_results.pass_only.tsv
   
   ```
