@@ -139,6 +139,9 @@ you also can run the Guupy in the paralel way by adjusting the batch file:
       2)preprocess the segmented raw signal file in the form of nanopolish eventalign file (this step takes several hours)
       $m6anet-dataprep --eventalign /eventalign.txt --out_dir /output_dir --n_processes 4
       3)m6anet-run_inference --input_dir /input_dir --out_dir /output_dir --infer_mod_rate --n_processes 4
+
+      # select the record that "probability_modified > 0.9"
+      awk -F',' '$4 > 0.9' data.result.csv > selected_0.9.csv
       
       # m6A modification comparision (Xpore)
       
