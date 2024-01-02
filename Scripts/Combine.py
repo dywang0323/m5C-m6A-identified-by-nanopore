@@ -13,9 +13,12 @@ merged_df = pd.DataFrame()
 # Process each file
 for file_name in file_paths:
     file_path = os.path.join(directory_path, file_name)
-    # Read the file
-    df = pd.read_csv(file_path, sep="\t", header=None, names=["ID", "Value"])
+    # Read the file, handling errors
+    df = pd.read_csv(file_path, sep="\t", header=None, names=["ID", "Value"], error_bad_lines=False)
     
+    # Fill missing values with 0
+    df.fillna(0, inplace=True)
+
     # Rename 'Value' column to the filename or a suitable identifier
     df.rename(columns={"Value": file_name}, inplace=True)
 
